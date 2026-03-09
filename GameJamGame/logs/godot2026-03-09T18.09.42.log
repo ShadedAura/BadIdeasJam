@@ -1,0 +1,15 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+D3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+
+ERROR: Failed to instantiate an autoload, path is not pointing to a scene or a script: res://Assets/JazzWarehouseMusic.ogg.
+   at: start (main/main.cpp:4417)
+ERROR: Node not found: "GameManager" (relative to "/root/Game/Conveyor Belts/Box").
+   at: get_node (scene/main/node.cpp:1963)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_ready (res://Scripts/box.gd:3)
+       [1] inst (res://Scripts/conveyor_belt.gd:13)
+       [2] _on_timer_timeout (res://Scripts/conveyor_belt.gd:17)
+SCRIPT ERROR: Attempt to call function 'add_money' in base 'null instance' on a null instance.
+   at: _on_area_entered (res://Scripts/box.gd:16)
+   GDScript backtrace (most recent call first):
+       [0] _on_area_entered (res://Scripts/box.gd:16)
