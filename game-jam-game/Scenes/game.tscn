@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://blkp6rp7u505c"]
+
+[ext_resource type="PackedScene" uid="uid://icl3ig8v8w5e" path="res://Scenes/conveyor_belt.tscn" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://qhy6hggk5jd5" path="res://Scripts/game_manager.gd" id="1_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://o4xy08yivf0v" path="res://Scenes/day_night.tscn" id="1_wowpa"]
+[ext_resource type="FontFile" uid="uid://j32smgu656gu" path="res://Assets/textures/Messy + Game Symbols.ttf" id="3_i6g32"]
+[ext_resource type="PackedScene" uid="uid://pobp4iadybu8" path="res://Scenes/truck.tscn" id="3_wrm1d"]
+[ext_resource type="AudioStream" uid="uid://c44p1sloyi22j" path="res://Assets/JazzWarehouseMusic.ogg" id="4_3dryh"]
+
+[node name="Game" type="Node2D" unique_id=1174886859]
+
+[node name="DayCycle" parent="." unique_id=570135029 instance=ExtResource("1_wowpa")]
+
+[node name="GameManager" type="Node" parent="." unique_id=436338754 groups=["GameManager"]]
+script = ExtResource("1_qxrlw")
+
+[node name="MoneyLabel" type="Label" parent="GameManager" unique_id=1479775785]
+offset_left = 383.0
+offset_top = -323.0
+offset_right = 576.0
+offset_bottom = -272.0
+theme_override_fonts/font = ExtResource("3_i6g32")
+text = "money =        $"
+metadata/_edit_use_anchors_ = true
+
+[node name="MoraleLabel" type="Label" parent="GameManager" unique_id=707605650]
+offset_left = 207.0
+offset_top = -322.0
+offset_right = 308.0
+offset_bottom = -299.0
+theme_override_fonts/font = ExtResource("3_i6g32")
+text = "morale =      §"
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=68431115]
+
+[node name="Conveyor Belts" type="Node" parent="." unique_id=442108546]
+
+[node name="Conveyor belt" parent="Conveyor Belts" unique_id=1989683042 instance=ExtResource("1_ebmjs")]
+
+[node name="Labels_UI" type="Node" parent="." unique_id=1819644724]
+
+[node name="Trucks" type="Node" parent="." unique_id=1135836510]
+
+[node name="Truck" parent="Trucks" unique_id=1567741013 instance=ExtResource("3_wrm1d")]
+position = Vector2(-574, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=178248929]
+stream = ExtResource("4_3dryh")
+autoplay = true

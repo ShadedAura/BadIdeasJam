@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dn7nc7iovkb0y"]
+
+[ext_resource type="Texture2D" uid="uid://s2pvd25l30qf" path="res://Assets/textures/Normal box gamejam.png" id="1_28flt"]
+[ext_resource type="Script" uid="uid://5b13pfe0dt2l" path="res://Scripts/main_menu_manager.gd" id="1_48xlc"]
+[ext_resource type="FontFile" uid="uid://j32smgu656gu" path="res://Assets/textures/Messy + Game Symbols.ttf" id="2_1ehe0"]
+
+[node name="MainMenu" type="Control" unique_id=1250570504]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_48xlc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1005493011]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1607259658]
+offset_left = 519.0
+offset_top = 299.0
+offset_right = 615.0
+offset_bottom = 339.0
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1442378522]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1ehe0")
+text = "Start Game"
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=816988863]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1ehe0")
+text = "Quit"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1911089079]
+position = Vector2(575, 323)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2011984148]
+position = Vector2(575, 323)
+texture = ExtResource("1_28flt")
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

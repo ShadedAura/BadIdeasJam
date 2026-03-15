@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dreu2f2jh0lbt"]
+
+[ext_resource type="Texture2D" uid="uid://difqy0metuk1o" path="res://icon.svg" id="1_ke2p0"]
+[ext_resource type="Texture2D" uid="uid://bimsw28sj01v" path="res://Assets/textures/Business Fox gamejam.png" id="1_ytble"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ytble"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_sds0f"]
+blend_mode = 2
+
+[node name="Banker" type="Node2D" unique_id=1708437020]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=472023637]
+position = Vector2(325, 320)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("1_ytble")
+
+[node name="Button2" type="Button" parent="Sprite2D" unique_id=91280612]
+offset_left = -55.0
+offset_top = 13.0
+offset_right = -9.0
+offset_bottom = 47.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Button2" unique_id=1919208536]
+material = SubResource("CanvasItemMaterial_ytble")
+position = Vector2(23, 17.000002)
+scale = Vector2(0.3671875, 0.2734375)
+texture = ExtResource("1_ke2p0")
+
+[node name="Button" type="Button" parent="Sprite2D" unique_id=1427950101]
+offset_left = 7.0
+offset_top = 11.0
+offset_right = 57.0
+offset_bottom = 49.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Button" unique_id=1440305396]
+material = SubResource("CanvasItemMaterial_sds0f")
+position = Vector2(25, 19)
+scale = Vector2(0.39550778, 0.29101563)
+texture = ExtResource("1_ke2p0")

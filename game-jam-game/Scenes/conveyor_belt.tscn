@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://icl3ig8v8w5e"]
+
+[ext_resource type="Script" uid="uid://dxctxche70kpf" path="res://Scripts/conveyor_belt.gd" id="1_xgy6c"]
+[ext_resource type="Texture2D" uid="uid://difqy0metuk1o" path="res://icon.svg" id="2_wr6f0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wr6f0"]
+size = Vector2(158, 40)
+
+[node name="Conveyor belt" type="Area2D" unique_id=1989683042]
+script = ExtResource("1_xgy6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=803383400]
+shape = SubResource("RectangleShape2D_wr6f0")
+
+[node name="Timer" type="Timer" parent="." unique_id=1123737517]
+wait_time = 10.0
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231185030]
+position = Vector2(4.5474735e-13, 0)
+scale = Vector2(1.234375, 0.3085937)
+texture = ExtResource("2_wr6f0")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

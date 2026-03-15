@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cjbmj4adsavu8"]
+
+[ext_resource type="Script" uid="uid://xhb6apc47myf" path="res://Scripts/box.gd" id="1_ego7h"]
+[ext_resource type="Texture2D" uid="uid://s2pvd25l30qf" path="res://Assets/textures/Normal box gamejam.png" id="1_xgy6c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wr6f0"]
+size = Vector2(55, 48)
+
+[node name="Box" type="Area2D" unique_id=57567293]
+script = ExtResource("1_ego7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1470260741]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_wr6f0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=284760424]
+scale = Vector2(0.014541629, 0.014541629)
+texture = ExtResource("1_xgy6c")
+
+[node name="Button" type="Button" parent="." unique_id=1271865100]
+offset_left = -28.0
+offset_top = -24.0
+offset_right = 27.0
+offset_bottom = 24.0
+flat = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
